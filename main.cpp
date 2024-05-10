@@ -3,16 +3,19 @@
 using namespace std;
 
 int main() {
-    int second, hours, minutes, seconds;
+    int count = 0;
 
-    cout << "Enter seconds: ";
-    cin >> second;
+    for (int num = 100; num <= 999; ++num) {
+        int cotni = num / 100;
+        int decyti = (num / 10) % 10;
+        int odinutsi = num % 10;
 
-    hours = second / 3600;
-    minutes = (second % 3600) / 60;
-    seconds = second % 60;
+        if (cotni == decyti || cotni == odinutsi || decyti == odinutsi) {
+            ++count;
+        }
+    }
 
-    cout << "Result: " << hours << " hours " << minutes << " minutes " << seconds << " seconds" << endl;
+    cout << "Result: " << count << endl;
     system("pause");
     return 0;
 }
