@@ -3,15 +3,15 @@
 using namespace std;
 
 int main() {
-    int number;
+    int num,digit;
     cout << "Enter number: ";
-    cin >> number;
+    cin >> num;
 
     int rezult = 0;
     int pozition = 1;
 
-    for (; number != 0; number /= 10) {
-        int digit = number % 10;
+    for (; num != 0; num /= 10) {
+        digit = num % 10;
         if (digit != 3 && digit != 6) {
             rezult += digit * pozition;
             pozition *= 10;
